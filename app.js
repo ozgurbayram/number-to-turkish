@@ -20,11 +20,13 @@ input.addEventListener('keyup',change)
 
 // Converts given number to text 
 const numberToText = (value,factor)=>{
-    const val = value.split('').reverse();
+    let  val = value.split('').reverse();
     let res = [];
     let fac = 1;
     for (let i = 0; i < val.length; i++) {
+    
         const element = parseInt(val[i])
+        if(element > 0){
         let r = numberTable[element*fac]
         if(r!==undefined) {
             res.unshift(r);
@@ -32,7 +34,7 @@ const numberToText = (value,factor)=>{
         if(r===undefined){
             let hunder = (numberTable[element]+numberTable[fac]) 
             res.unshift(hunder);
-        }
+        }}
         fac = fac * 10;
     }
     if(factor>1){
@@ -56,6 +58,9 @@ const returnArrayOfDigits = (value)=>{
 
 // Convert 
 convert.addEventListener('click', () => {
+    if(input.value.toString().startsWith(0)){
+        input.value = input.value.toString().slice(1);
+    }
     returnArrayOfDigits(input.value);
 })
 

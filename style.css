@@ -3,27 +3,29 @@
     margin: 0;
 }
 
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
-    width:1280px;
-    height: 100vh;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .convert-container {
-    flex-direction: row;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
+
 .input{
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 21px;
+    margin: 10px;
 }
 
 .input:focus{
@@ -37,7 +39,7 @@ body{
     font-size: 21px;
     background-color: #ccc;
     color: #333;
-    margin: 0 10px 0 10px
+    margin: 10px;
 }
 
 .button:hover{
@@ -50,7 +52,7 @@ body{
     outline: 2px solid #ccc;
 }
 
-.clear:disabled  {
+.button:disabled  {
     opacity: 0.5;
 }
 /* if clear is disabled do not hover  */
@@ -60,8 +62,9 @@ body{
     color: #333;
 }
 .result {
-    padding: 10px;
     font-size: 21px;
+    width: 100%;
+    text-align: center;
     margin-top: 30px;
     color: #333;
     margin-top: 30px;
