@@ -13,6 +13,7 @@ window.onload = function() {
 const change = (e)=>{
     if(input.value.length > 0){
         clear.removeAttribute('disabled');
+        convert.removeAttribute('disabled');
     }
 }   
 input.addEventListener('keyup',change)
