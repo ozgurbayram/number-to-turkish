@@ -43,7 +43,7 @@ const numberToText = (value,factor)=>{
 // parses input and creates array 
 const returnArrayOfDigits = (value)=>{
     const res = [];
-    let nums = parseInt(value,10).toLocaleString().split(',').reverse();
+    let nums = parseInt(value,10).toLocaleString('en-US').split(',').reverse();
     let factor = 1
     for (let i = 0; i < nums.length; i++) {
         const element = nums[i];
